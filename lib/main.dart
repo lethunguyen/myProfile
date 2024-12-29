@@ -174,7 +174,13 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ), 
+      bottomNavigationBar: BottomNavigationBar(items: const [
+        BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),
+        BottomNavigationBarItem(label: "About", icon:Icon(Icons.next_plan)),
+         BottomNavigationBarItem(label: "Contact", icon:Icon(Icons.contact_mail)),
+      ] 
+      ),// This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
