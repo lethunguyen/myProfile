@@ -22,8 +22,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
+    //MaterialApp class: Material design
     return MaterialApp(
-      title: 'Flutter Layout',
+      title: 'My Profile app',
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -98,7 +100,16 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+    //Trien khai bo cuc hinh anh material design co ban
+    //Cung cap nhieu widget or api cho ung dung
+    //Drawer, SnackBar,
+    //BottomNavigation,
+    //AppBar, FloatingActionButton
+    //
     return Scaffold(
+      //Mot thanh ngang
+      //Hien thi tren cung Widget Scaffold
+      //Tuy chinh, do cao tieu de do sang
       appBar: AppBar(
         // TRY THIS: Try changing the color here to a specific color (to
         // Colors.amber, perhaps?) and trigger a hot reload to see the AppBar
@@ -108,6 +119,9 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
+      //Body: Phan chinh, hien thi noi dung Scaffold
+      //Hien thi duoi appBar
+      //sau floatActionButton va Drawer
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
