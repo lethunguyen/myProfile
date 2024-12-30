@@ -15,3 +15,14 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+# Platform Firebase App Id
+
+```
+Platform  Firebase App Id
+web       1:837780831588:web:e940f387fae658dd5a4e71
+android   1:837780831588:android:33c16a7dfb976d5e5a4e71
+ios       1:837780831588:ios:c2183adc06d0ad075a4e71
+macos     1:837780831588:ios:c2183adc06d0ad075a4e71
+windows   1:837780831588:web:b0ffb030151c47615a4e71
+```
