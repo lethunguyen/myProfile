@@ -1,4 +1,9 @@
-# myapptest
+# My Profile App
+
+## Introduction
+<img src="demo/firstApp.png" />
+
+
 /Users/lethunguyen/Documents/Phenikaa/Flutter/myapp/myapptest/lib/main.dart
 command + shift + dot
 A new Flutter project.
