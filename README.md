@@ -1,7 +1,11 @@
-# myapptest
-/Users/lethunguyen/Documents/Phenikaa/Flutter/myapp/myapptest/lib/main.dart
-command + shift + dot
-A new Flutter project.
+# My Profile App
+
+## Introduction
+
+A new Flutter Profile App project.
+
+<img src="https://lethunguyen.github.io/MobileDev/demo/fristApp.png" width="30%"/>
+
 
 ## Getting Started
 
@@ -15,3 +19,12 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+
+# Note
+
+```
+/Users/lethunguyen/Documents/Phenikaa/Flutter/myapp/myapptest/lib/main.dart
+
+command + shift + dot
+```
