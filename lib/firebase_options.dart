@@ -85,4 +85,5 @@ class DefaultFirebaseOptions {
     storageBucket: 'my-profile-d404f.firebasestorage.app',
     measurementId: 'G-MN2JXCS9MR',
   );
+
 }
