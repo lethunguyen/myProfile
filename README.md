@@ -24,7 +24,6 @@ samples, guidance on mobile development, and a full API reference.
 # Note
 
 ```
-``
 /Users/lethunguyen/Documents/Phenikaa/Flutter/myapp/myapptest/lib/main.dart
 
 command + shift + dot
