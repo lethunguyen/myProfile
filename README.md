@@ -1,7 +1,7 @@
 # My Profile App
 
 ## Introduction
-<img src="demo/fristApp.png" />
+<img src="demo/fristApp.png" width="30%"/>
 
 
 /Users/lethunguyen/Documents/Phenikaa/Flutter/myapp/myapptest/lib/main.dart
