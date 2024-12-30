@@ -1,7 +1,7 @@
 # My Profile App
 
 ## Introduction
-<img src="demo/firstApp.png" />
+<img src="demo/fristApp.png" />
 
 
 /Users/lethunguyen/Documents/Phenikaa/Flutter/myapp/myapptest/lib/main.dart
