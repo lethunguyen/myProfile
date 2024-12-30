@@ -180,7 +180,8 @@ class _MyHomePageState extends State<MyHomePage> {
         BottomNavigationBarItem(label: "About", icon:Icon(Icons.next_plan)),
          BottomNavigationBarItem(label: "Contact", icon:Icon(Icons.contact_mail)),
       ] 
-      ),// This trailing comma makes auto-formatting nicer for build methods.
+      ),
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
