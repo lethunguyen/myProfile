@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 import './myprofile.dart' show Myprofile;
 
+<<<<<<< HEAD
 void main() {
   runApp(const MyApp()); //Display widget on screen
+=======
+main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+ await Firebase.initializeApp(
+  options: DefaultFirebaseOptions.currentPlatform,
+);
+
+  runApp(const MyApp());//Display widget on screen
+>>>>>>> 256c2aa0619ad9bc97452e3ee96d5f03688e89e0
 }
 
 extension HexColor on Color {
