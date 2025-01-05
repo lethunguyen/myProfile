@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import './myprofile.dart' show Myprofile;
 
 void main() {
-  runApp(const MyApp());//Display widget on screen
+  runApp(const MyApp()); //Display widget on screen
 }
 
 extension HexColor on Color {
@@ -14,6 +14,7 @@ extension HexColor on Color {
     return Color(int.parse(buffer.toString(), radix: 16));
   }
 }
+
 //StatlessWidget: no change in state while running
 //No redraw interface
 class MyApp extends StatelessWidget {
@@ -22,7 +23,6 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
     //MaterialApp class: Material design
     return MaterialApp(
       title: 'My Profile app',
@@ -72,8 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
   // int _counter = 0;
   final String _saying = "What comes around will turn arround !";
   String test = Myprofile().getMyProfile();
-
-  //mypro.setMyProfile("25/12/2024", "Phenikaa University", "Lecturer");
+  Myprofile mypro = Myprofile();
 
   static const Map<String, Color> _colors = <String, Color>{
     'Library Management': Colors.pinkAccent,
@@ -91,9 +90,19 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _setProfile() {
+    setState(() {
+      mypro.setMyProfile('1/1/2005', 'Phenikaa University', 'Lecturer');
+      mypro.setMyProfile('1/2/2005', 'Phenikaa University', 'Lecturer');
+      mypro.setMyProfile('1/3/2005', 'Phenikaa University', 'Lecturer');
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
+    _setProfile();
+
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
@@ -144,10 +153,12 @@ class _MyHomePageState extends State<MyHomePage> {
             /*const Text(
              // 'You have pushed the button this many times:',
             ),*/
+
             /* Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),*/
+
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
               child: Image.network(
@@ -159,7 +170,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
                 color: HexColor.fromHex('#e9f5f8'),
                 width: width * 0.95,
-                height: width * 0.99,
+                height: width * 0.10,
                 alignment: Alignment.topCenter,
                 child: Column(
                   children: [
@@ -167,20 +178,39 @@ class _MyHomePageState extends State<MyHomePage> {
                     Text('$test'),
                   ],
                 )),
+            Container(
+              color:  Colors.amber,
+              width: width * 0.95,
+              height: width * 0.90,
+              alignment: Alignment.topCenter,
+              child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 3,
+                  ),
+                  itemCount: 300,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Card(
+                      color: Colors.amber,
+                      child: Center(child: Text('$test')),
+                    );
+                  }),
+            )
           ],
         ),
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), 
+      ),
+
       bottomNavigationBar: BottomNavigationBar(items: const [
         BottomNavigationBarItem(label: "Home", icon: Icon(Icons.home)),
-        BottomNavigationBarItem(label: "About", icon:Icon(Icons.next_plan)),
-         BottomNavigationBarItem(label: "Contact", icon:Icon(Icons.contact_mail)),
-      ] 
-      ),
+        BottomNavigationBarItem(label: "About", icon: Icon(Icons.next_plan)),
+        BottomNavigationBarItem(
+            label: "Contact", icon: Icon(Icons.contact_mail)),
+      ]),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
